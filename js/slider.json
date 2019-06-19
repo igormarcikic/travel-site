@@ -1,0 +1,7 @@
+    {
+        
+        "serbia": ["Novi Sad, Serbia","../img/novi_sad.png"],
+        "netherlands": ["Amsterdam, Netherlands", "../img/amsterdam.png"],
+        "bahamas": ["The Bahamas", "../img/bahamas.png"]
+        
+    }

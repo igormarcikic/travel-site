@@ -1,0 +1,148 @@
+.accordionWrap {
+    text-align: center;
+
+    h2, h3 {
+        font-size: 23px;
+        font-weight: 700;
+        padding: 58px 0;
+    }
+}
+
+.accordAll {
+    background-color: $main-light;
+
+    h2, h3, p {
+        color:#fff;
+    }
+
+    h2 {
+        padding: 42px 0;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0 0;
+        padding: 0 0 32px 0;
+    }
+
+    p {
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        line-height: 22px;
+        padding: 0 20px 30px;
+    }
+
+    button {
+        @include button;
+    }
+}
+
+.accordToggle {
+    padding: 0 20px;
+    background-color: $bg-color;
+
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+    }
+}
+
+.accordion {
+    position: relative;
+    margin-bottom: 20px;
+
+    h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 40%;
+        right: 40px;
+    }
+}
+
+.full {
+    width: 100%;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transition: height 0.8s ease-in-out;
+    -moz-transition: height 0.8s ease-in-out;
+    -o-transition: height 0.8s ease-in-out;
+    transition: height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-out;
+
+    h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    hr {
+        width: 55px;
+        height: 2px;
+        color: #123455;
+        background-color: #123455;
+        border: none;
+        margin: 15px auto 20px;
+    }
+
+    p {
+        color: #000;
+    }
+}
+
+.panelShow {
+    max-height: 100%;
+    padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .accordAll {
+        margin: 0 60px;
+        padding-bottom: 60px;
+
+    }
+
+    .accordToggle {
+        margin: 0 -40px ;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .accordAll {
+        max-width: 1181px;
+        display: inline-flex;
+        padding: 20px;
+        text-align: left;
+        position: relative; 
+        margin: 0 20px;
+        border-radius: 4px;
+        
+        p {
+            padding-left: 0;
+            text-align: left;
+        }
+    }
+
+    .topWrap {
+       flex-basis: 43%;
+
+    }
+
+    .accordToggle {
+        position: absolute;
+        width: 50%;
+        top: -37px;
+        right: 60px;
+        text-align: center;
+    }
+
+}

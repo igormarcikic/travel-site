@@ -1,0 +1,149 @@
+.heroWrap {
+    overflow: hidden;
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 152px 20px 10px;
+
+}
+
+.heroInner {
+    color: #fff;
+
+    h2 {
+        margin-bottom: 42px;
+        font-size: 45px;
+        font-weight: 700;
+        width: 300px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 54px;
+    }
+}
+
+.ctaWrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 117px;
+
+    .explore {
+       @include button;
+    }
+
+    .play {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: transparent;
+        color:#fff;
+        padding: 13px 25px;
+        margin-left: 20px;
+
+        &:hover {
+            background-color: #fff;
+            color: $main-dark;
+        }
+
+        &:hover .playBtns {
+            background-position: (0,0);
+        }
+    }
+}
+
+.playBtns {
+    display: inline-block;
+    width: 9px;
+    height: 12px;
+    background-image: url(../img/play-bttns.png);
+    background-repeat: no-repeat;
+    background-position: (-9px,0);
+    margin-right: 9px;
+}
+
+.reviewWrap {
+    text-align: right;
+    color: #000;
+    width: 230px;
+    float: right;
+    position: relative;
+
+    h4 {
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+
+    &:before {
+        content: open-quote;
+        color: rgba(255,255,255, 0.6);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 221px;
+        font-weight: bold;
+        line-height: 120px;
+        left: -21px;
+        top: 9px;
+        position: absolute;
+        width: 90px;
+        z-index: 0;
+    }
+}
+
+.reviewText {
+    z-index: 1;
+}
+
+.reviewUser {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .userImage {
+        padding: 5px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .heroInner {
+        max-width:1181px;
+        margin: 0 auto;
+    }
+
+    .heroInner > p {
+        width: 420px;
+    }
+
+    .ctaWrap {
+        justify-content: left;
+    }
+
+    .reviewWrap {
+        text-align: left;
+        width: 350px;
+        display: flex;
+
+        &:before {
+            left: -60px;
+        }
+    }
+
+    .reviewUser {
+        flex-direction: column;
+        margin-left: 45px;
+    }
+
+    .userInfo {
+        writing-mode: vertical-rl;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+}

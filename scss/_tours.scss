@@ -1,0 +1,158 @@
+.summerToursWrapper {
+    background-color: $blue-md-ligh;
+    padding: 0 20px;
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 31px;
+    }
+}
+
+.summerInner {
+    max-width: 1181px;
+    margin: 0 auto;
+    padding: 83px 0;
+}
+
+
+.summerItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 37px;
+
+    .siLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 5px dotted $light;
+        padding: 15px 15px;
+
+        img {
+            align-self: center;
+            margin-bottom: 18px;
+        }
+
+    }
+
+    .siRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 0 0;
+
+        p {
+            font-size: 18px;
+            font-weight: 800;
+            color: $main-light;
+        }
+
+        button {
+            border: none;
+            background: $blue-light;
+            color:#fff;
+            padding: 8px 37px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: darken($color: $blue-light, $amount: 30%)
+            }
+        }
+    }
+
+
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .summerToursWrapper {
+        background-image: url(../img/people-vector.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        h2 {
+            margin-bottom: 57px;
+        }
+    }
+    
+
+    .summerItem {
+        flex-direction: row;
+        width: 75%;
+        padding: 0 22px 0 47px;
+
+        .siLeft {
+            text-align: left;
+            align-items: center;
+            border-right: 5px dotted $light;
+            border-bottom: none;
+            font-size: 14px;
+            flex-direction: row;
+
+            img {
+                width: 40px;
+            }
+
+            div {
+                padding:0 50px;
+            }
+        }
+
+        .siRight {
+            padding: 0 29px;
+        }
+
+    }
+
+    .highlighted {
+        width: 90%;
+
+        .siLeft { 
+            border-right: 10px dotted $light;
+            flex-grow: 1;
+
+            img {
+                width: 79px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and  (min-width:990px) {
+
+    .summerToursWrapper {
+        h2 {
+            margin-bottom: 114px;
+        }
+    }
+
+    .summerItem {
+        width: 60%;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    .highlighted {
+        width: 80%;
+    }
+
+    .siRight {
+        p {
+            font-size: 25px;
+        }
+    }
+}

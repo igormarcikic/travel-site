@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'navigation';
+@import 'hero';
+@import 'modal';
+@import 'carousel';
+@import 'tours';
+@import 'accordion';
+@import 'text';
+@import 'contact';
+@import 'footer';
+
+@include google-font('Montserrat');
+
+body {
+    font-family: $main-font;
+}
